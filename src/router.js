@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express';
+import StatusServerController from './controllers/StatusServerController.js';
 
 const router = Router();
 
-import StatusServerController from "./controllers/StatusServerController.js";
-
-router.get("/", StatusServerController.statusServer);
+router.get('/', StatusServerController.statusServer);
+router.get('/donation', StatusServerController.statusServer);
 
 export default router;
