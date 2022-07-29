@@ -14,5 +14,9 @@ module.exports = {
     'import/extensions': 'off',
     'linebreak-style': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-console': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    'no-underscore-dangle': 'off',
+    'class-methods-use-this': 'off',
   },
 };
