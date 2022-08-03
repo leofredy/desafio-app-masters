@@ -18,5 +18,6 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
     'no-underscore-dangle': 'off',
     'class-methods-use-this': 'off',
+    'no-lonely-if': 'off',
   },
 };

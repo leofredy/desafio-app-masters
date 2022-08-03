@@ -1,7 +1,7 @@
 export default [
   {
     name: 'any',
-    email: '',
+    email: null,
     phone: '99999999999',
     zip: '99999999',
     city: 'any city',
@@ -20,7 +20,7 @@ export default [
   },
   {
     name: 'any',
-    email: '',
+    email: null,
     phone: '99999999999',
     zip: '99999999',
     city: 'any city',

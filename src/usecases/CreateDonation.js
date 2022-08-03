@@ -40,7 +40,7 @@ export default class CreateDonation extends EventEmitter {
     const requiredFieldsCase = [];
 
     // Se tiver email, valida o email
-    if (email.length && this._validators.validateEmail(email).error) {
+    if (email !== null && email !== undefined && this._validators.validateEmail(email).error) {
       errorMessageCase = 'O campo email é opcional, mas se informado deve ser um email válido';
     } else { // Valida os valores dos campos dos devices.
       const validDevice = devices.every((value) => {
