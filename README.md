@@ -2,9 +2,18 @@
 
 ## Projeto em produção.
 [Link API](https://api-doacao-pc-app-master.herokuapp.com/)
+
+[Download Collection Postman](https://drive.google.com/file/d/1xAGYifrIhZz32miwMKT2wpnluG842dRr/view?usp=sharing)
 ### Endpoints:
+
 - Verificação de vida da API:
   #### GET: '/'
+  #### Response:
+  ```
+{
+  "alive": true
+}
+  ```
 
 - Cria uma doação:
   #### POST: /donation
@@ -31,9 +40,27 @@
   #### Responses:
 ```
 {
-  "success": true
-}
+  "success": true,
+  "data": {
+      "giverId": 4,
+      "donationId": 14,
+      "devicesId": [
+          24,
+          34
+      ]
+  }
 ```
+
+- Listagem de doação:
+  #### GET: /donation
+  #### Request query:
+    * Obrigatórios:
+      limit: um número.
+      offset: um número.
+
+    * Opcional:
+      order: 'asc' || 'desc'
+      default: 'asc'
 
 
 
@@ -42,10 +69,22 @@
 ```
   npm run start
 ```
+
 * Inicia em modo de desenvolvimento
 ```
   npm run dev
 ```
+
+* Criação da database
+```
+  npm run migration:up
+```
+
+* Rollback database
+```
+  npm run migration:down
+```
+
 * Realiza testes e2e
 ```
   npm run test

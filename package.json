@@ -8,8 +8,8 @@
     "dev": "nodemon ./src/main.js",
     "start": "npx typeorm migration:run -d ./src/database/ormconfig.js && node ./src/main.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
-    "migration:up": "typeorm migration:run -d ./src/database/ormconfig.js",
-    "migration:down": "typeorm migration:revert -d ./src/database/ormconfig.js"
+    "migration:up": "npx typeorm migration:run -d ./src/database/ormconfig.js",
+    "migration:down": "npx typeorm migration:revert -d ./src/database/ormconfig.js"
   },
   "author": "Leonardo Frederico da Silva",
   "license": "ISC",
