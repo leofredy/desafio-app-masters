@@ -33,10 +33,7 @@ class DonationRepository {
       complement,
       neighborhood,
     });
-
-    const donationRepository = this._donationRepository.getRepository('Donation');
-
-    const { id: donationId, device: donationDevices } = await donationRepository.save({
+    const { id: donationId, device: donationDevices } = await this._donationRepository.save({
       deviceCount,
       giverId,
       device: devices,
