@@ -3,8 +3,9 @@ import EventEmitter from 'events';
 import Donation from '../domain/Donation.js';
 
 export default class CreateDonation extends EventEmitter {
-  constructor({ validators }) {
+  constructor({ DonationRepository, validators }) {
     super();
+    this._repository = DonationRepository;
     this._validators = validators;
   }
 
@@ -25,8 +26,14 @@ export default class CreateDonation extends EventEmitter {
         }
         this.emit('ERROR', dataCase);
       } else {
-        this.emit('SUCCESS', {
-          success: true,
+        this._repository.create(donationData).then((data) => {
+          this.emit('SUCCESS', {
+            success: true,
+            data,
+          });
+        }).catch((error) => {
+          console.log('ERRORDONATION: ', error);
+          this.emit('ERROR');
         });
       }
     }

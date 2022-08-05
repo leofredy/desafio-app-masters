@@ -2,14 +2,28 @@ import {
   test,
   expect,
   describe,
+  beforeAll,
+  afterAll,
 } from '@jest/globals';
 
 import Supertest from 'supertest';
-import Server from '../../src/server.js';
-
 import casesBlankFields from './casesBlankFields.js';
 import caseDeviceCountDevice from './caseDeviceCountDevice.js';
 import caseDeviceFields from './caseDeviceFields.js';
+
+import Server from '../../src/server.js';
+import dataSource from '../../src/database/ormconfig.js';
+
+let connection;
+
+// Cria uma conexão com o banco em cada teste.
+beforeAll(async () => {
+  connection = await dataSource.initialize();
+  return connection;
+});
+
+// Exclui a conexão com o banco a cada teste.
+afterAll(() => connection.destroy());
 
 describe('Tests blank fields', () => {
   for (let indexCase = 0; indexCase < casesBlankFields.length; indexCase += 1) {
@@ -78,7 +92,7 @@ describe('Test email field', () => {
       );
 
     expect(response.statusCode).toEqual(200);
-    expect(response.body).toEqual({ success: true });
+    expect(Object.prototype.hasOwnProperty.call(response.body, 'success')).toEqual(true);
   });
 });
 
@@ -99,7 +113,7 @@ describe('Test deviceCount and device', () => {
       .send(caseDeviceCountDevice[1]);
 
     expect(response.statusCode).toEqual(200);
-    expect(response.body).toEqual({ success: true });
+    expect(Object.prototype.hasOwnProperty.call(response.body, 'success')).toEqual(true);
   });
 });
 

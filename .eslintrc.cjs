@@ -19,5 +19,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'class-methods-use-this': 'off',
     'no-lonely-if': 'off',
+    'use-isnan': 'off',
   },
 };

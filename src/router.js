@@ -9,6 +9,7 @@ const router = Router();
 
 router.get('/', StatusServerController.statusServer);
 router.post('/donation', CreateDonationController.create);
+router.get('/donation', CreateDonationController.find);
 
 router.use(errorHandler);
 

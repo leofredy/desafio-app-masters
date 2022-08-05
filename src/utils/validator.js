@@ -54,7 +54,7 @@ export function validateBlankFields(listFields, data) {
         } else if (Array.isArray(data[requiredField])) { // array
           invalid = !data[requiredField].length;
         } else { // string
-          // caso o campo seja uma string e um cep ou phone.
+          // caso o campo seja uma string verifica se cep ou phone.
           if (requiredField === 'zip' || requiredField === 'phone') {
             if (requiredField === 'phone') {
               invalid = validatePhone(data[requiredField]).error;
