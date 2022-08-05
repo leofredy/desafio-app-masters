@@ -62,7 +62,13 @@
       order: 'asc' || 'desc'
       default: 'asc'
 
-
+<br />
+<br />
+<h3>* Importante a criação do arquivo env na raiz do projeto, use o .env-example para preenchimento adequado. O projeto utiliza MySQL.
+</h3>
+<br />
+<br />
+<br />
 
 ### Comandos do projeto:
 * Inicia em modo de produção
