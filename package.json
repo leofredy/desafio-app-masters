@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./src/main.js",
-    "start": "node ./src/main.js",
+    "start": "npx typeorm migration:run -d ./src/database/ormconfig.js && node ./src/main.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
     "migration:up": "typeorm migration:run -d ./src/database/ormconfig.js",
     "migration:down": "typeorm migration:revert -d ./src/database/ormconfig.js"
