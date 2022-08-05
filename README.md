@@ -9,11 +9,11 @@
 - Verificação de vida da API:
   #### GET: '/'
   #### Response:
-  ```
-{
-  "alive": true
-}
-  ```
+```
+  {
+    "alive": true
+  }
+```
 
 - Cria uma doação:
   #### POST: /donation
