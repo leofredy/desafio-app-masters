@@ -51,7 +51,7 @@ class DonationRepository {
       take: limit,
       skip: offset,
       order: {
-        id: order || 'ASC',
+        id: order || 'DESC',
       },
       relations: {
         giver: true,

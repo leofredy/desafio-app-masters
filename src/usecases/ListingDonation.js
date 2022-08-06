@@ -15,7 +15,6 @@ export default class ListingDonation extends EventEmitter {
       });
     } else {
       this._repository.findAll({ limit, offset, order }).then((data) => {
-        console.log(data);
         this.emit('SUCCESS', { success: true, data });
       });
     }
