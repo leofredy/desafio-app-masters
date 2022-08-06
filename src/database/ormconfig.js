@@ -3,7 +3,7 @@ import 'dotenv/config';
 
 /**
  * Realizei a importação sincrona
- * para evitar erro na execução do JEST :(
+ * para evitar erro na execução do testes automatizado no JEST :(
  */
 import EntityGiver from './entity/GiverSchema.js';
 import EntityDevice from './entity/DeviceSchema.js';

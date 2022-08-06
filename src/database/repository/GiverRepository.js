@@ -49,5 +49,5 @@ class GiverRepository {
     return update;
   }
 }
-// singloton
+// Singleton Pattern
 export default new GiverRepository();

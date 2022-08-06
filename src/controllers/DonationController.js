@@ -1,3 +1,11 @@
+/**
+ * Implementação do projeto ultilizando a arquitetura limpa
+ * Controller se torna responsável apenas por utilizar:
+ *  Os casos de usos,
+ *  Os repositorys
+ *  E receber o request e responder com o response.
+ */
+
 import CreateDonation from '../usecases/CreateDonation.js';
 import ListingDonation from '../usecases/ListingDonation.js';
 

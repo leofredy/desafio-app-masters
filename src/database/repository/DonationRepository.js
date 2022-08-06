@@ -60,5 +60,5 @@ class DonationRepository {
     });
   }
 }
-
+// Singleton Pattern
 export default new DonationRepository();

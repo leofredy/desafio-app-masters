@@ -1,3 +1,15 @@
+/**
+ * Implementação do projeto ultilizando a arquitetura limpa.
+ * As camadas do caso de uso se torna responsável apenas pela regra da aplicação, sendo:
+ *  - Validação dos campos para o funcionamento desta a aplicação em exclusivo,
+ *  - E processamento dos calculos,etc
+ *  - Deve ter depender apenas da regra do dominio
+ *  - São regras que podem ser implementada fora do sistema - em papel e caneta.
+ *
+ *  *OBS: O repository que é uma cama mais externa utilizo a injeção de dependencia,
+ *  pois o caso de uso não é obrigado a saber qual o repository sera usado, por isso
+ *  é recebido por quem instanciará o caso de uso - neste caso o controller.
+ */
 import { EventEmitter } from 'events';
 
 export default class ListingDonation extends EventEmitter {

@@ -1,3 +1,11 @@
+/**
+ * Implementação do projeto ultilizando a arquitetura limpa.
+ * As camadas do dominio se torna responsável apenas pela regra do dominio, sendo:
+ *  - Validação dos campos usados no dominio,
+ *  - E processamento dos calculos,etc
+ *  - Não deve possuir nenhuma ligação com tecnologia.
+ *  - São regras que podem ser implementada fora do sistema - em papel e caneta.
+ */
 export default class Donation {
   constructor(
     {
