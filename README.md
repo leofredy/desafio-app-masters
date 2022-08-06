@@ -1,5 +1,12 @@
 # API do projeto de doação de computador.
 
+## Informações do projeto:
+ - Projeto esta utilizando a arquitetura limpa com o design pattern singloton, e implementação do Data Mapper Patterns com TypeORM.
+ 
+ - No banco de dados esta sendo usado MySQL o diagramado de modelo entidade utilizado é ilustrado abaixo: 
+ ![image](https://user-images.githubusercontent.com/62650643/183231851-5fb1fa3a-b306-4d31-b439-a63243e15905.png)
+
+
 ## Projeto em produção.
 [Link API](https://api-doacao-pc-app-master.herokuapp.com/)
 
